@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Achivment_API</name>
+    </assembly>
+    <members>
+        <member name="M:Achivment_API.Controllers.UserController.GetAll">
+            <summary>
+            Получение данных пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.UserController.Add(Achivment_API.Controllers.User)">
+             <summary>
+             Создание нового пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                    "nickname" : "Swag",
+                    "email" : "qwerty5@asd.com",
+                    "country" : "German",
+                    "gender" : "male"
+                    "training_goal" : "wanna be the best baseball player"
+                    "kind_of_sport" : "baseball"
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.UserController.Update(Achivment_API.Controllers.User)">
+             <summary>
+             Обновление данных пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                    "nickname" : "Swag",
+                    "email" : "qwerty5@asd.com",
+                    "country" : "German",
+                    "gender" : "male"
+                    "training_goal" : "wanna be the best baseball player"
+                    "kind_of_sport" : "baseball"
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.UserController.Delete(System.Int32)">
+             <summary>
+             Удаление данных пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.UserController.GetById(System.Int32)">
+             <summary>
+             Получение данных пользователя по его ID
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.AchivmentController.GetAll">
+            <summary>
+            Получение данных о достижениях
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.AchivmentController.Add(Achivment_API.Controllers.Achivment)">
+             <summary>
+             Создание достижения
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                    "date" : "01.01.24",
+                    "type_of_achivment" : "fast win",
+                    "desription" : "a few homerans",
+                    "photo" : "homeran.jpg",
+                    "video" : "homeran.asf",
+                    "user_ID" : "1",
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.AchivmentController.Update(Achivment_API.Controllers.Achivment)">
+             <summary>
+             Обновление достижения
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                    "date" : "01.01.24",
+                    "type_of_achivment" : "fast win",
+                    "desription" : "a few homerans",
+                    "photo" : "homeran.jpg",
+                    "video" : "homeran.asf",
+                    "user_ID" : "1",
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.AchivmentController.Delete(System.Int32)">
+             <summary>
+             Удаление достижения
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:Achivment_API.Controllers.AchivmentController.GetById(System.Int32)">
+             <summary>
+             Получение данных достижения по его ID
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "ID" : "1",
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -5,7 +5,11 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Achivment_API", "Achivment_API.csproj", "{760CD935-FD3A-4A53-8296-42A83CB0A03B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Achivment_Data_Access", "..\Achivment_Data_Access\Achivment_Data_Access.csproj", "{AA22B756-C11C-414A-A8F1-A541D45F4CB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Achivment_Data_Access", "..\Achivment_Data_Access\Achivment_Data_Access.csproj", "{AA22B756-C11C-414A-A8F1-A541D45F4CB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CEB2AFF3-5582-40B2-838E-D559BAB02E8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Achivment_Mapster", "..\Achivment_Mapster\Achivment_Mapster.csproj", "{013EEE90-7FB1-402D-9569-93478D6F3E18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,10 @@ Global
 		{AA22B756-C11C-414A-A8F1-A541D45F4CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA22B756-C11C-414A-A8F1-A541D45F4CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA22B756-C11C-414A-A8F1-A541D45F4CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{013EEE90-7FB1-402D-9569-93478D6F3E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{013EEE90-7FB1-402D-9569-93478D6F3E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{013EEE90-7FB1-402D-9569-93478D6F3E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{013EEE90-7FB1-402D-9569-93478D6F3E18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

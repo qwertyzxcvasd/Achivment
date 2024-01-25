@@ -35,11 +35,37 @@ namespace Achivment_API.Controllers
             _logger = logger;
         }
         public List<User> users = new List<User>();
+        /// <summary>
+        /// Получение данных пользователей
+        /// </summary>
+        /// <returns></returns>
+
+        //POST api/<UsersController>
         [HttpGet]
         public List<User> GetAll()
         {
             return users;
         }
+        /// <summary>
+        /// Создание нового пользователя
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///        "nickname" : "Swag",
+        ///        "email" : "qwerty5@asd.com",
+        ///        "country" : "German",
+        ///        "gender" : "male"
+        ///        "training_goal" : "wanna be the best baseball player"
+        ///        "kind_of_sport" : "baseball"
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Add(User data)
         {
@@ -47,12 +73,32 @@ namespace Achivment_API.Controllers
             {
                 if (users[i].ID == data.ID)
                 {
-                    return BadRequest("Запись с таким ID уже есть");
+                    return BadRequest("Пользователь с таким ID уже есть");
                 }
             }
             users.Add(data);
             return Ok();
         }
+        /// <summary>
+        /// Обновление данных пользователя
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///        "nickname" : "Swag",
+        ///        "email" : "qwerty5@asd.com",
+        ///        "country" : "German",
+        ///        "gender" : "male"
+        ///        "training_goal" : "wanna be the best baseball player"
+        ///        "kind_of_sport" : "baseball"
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Update(User data)
         {
@@ -64,8 +110,22 @@ namespace Achivment_API.Controllers
                     return Ok();
                 }
             }
-            return BadRequest("Такая запись не обнаружена");
+            return BadRequest("Такой пользователь не обнаружен");
         }
+        /// <summary>
+        /// Удаление данных пользователя
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpDelete]
         public IActionResult Delete(int id)
         {
@@ -77,8 +137,22 @@ namespace Achivment_API.Controllers
                     return Ok();
                 }
             }
-            return BadRequest("Такая запись не обнаружена");
+            return BadRequest("Такой пользователь не обнаружен");
         }
+        /// <summary>
+        /// Получение данных пользователя по его ID
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id) 
         {
@@ -89,7 +163,7 @@ namespace Achivment_API.Controllers
                     return Ok(users[i]);
                 }
             }
-            return BadRequest("Такая запись не обнаружена");
+            return BadRequest("Такой пользователь не обнаружен");
         }
     }
 
@@ -104,11 +178,35 @@ namespace Achivment_API.Controllers
             _logger = logger;
         }
         public List<Achivment> achivments = new List<Achivment>();
+        /// <summary>
+        /// Получение данных о достижениях
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public List<Achivment> GetAll()
         {
             return achivments;
         }
+        /// <summary>
+        /// Создание достижения
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///        "date" : "01.01.24",
+        ///        "type_of_achivment" : "fast win",
+        ///        "desription" : "a few homerans",
+        ///        "photo" : "homeran.jpg",
+        ///        "video" : "homeran.asf",
+        ///        "user_ID" : "1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Add(Achivment data)
         {
@@ -122,6 +220,26 @@ namespace Achivment_API.Controllers
             achivments.Add(data);
             return Ok();
         }
+        /// <summary>
+        /// Обновление достижения
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///        "date" : "01.01.24",
+        ///        "type_of_achivment" : "fast win",
+        ///        "desription" : "a few homerans",
+        ///        "photo" : "homeran.jpg",
+        ///        "video" : "homeran.asf",
+        ///        "user_ID" : "1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Update(Achivment data)
         {
@@ -135,6 +253,20 @@ namespace Achivment_API.Controllers
             }
             return BadRequest("Такая запись не обнаружена");
         }
+        /// <summary>
+        /// Удаление достижения
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpDelete]
         public IActionResult Delete(int id)
         {
@@ -148,6 +280,20 @@ namespace Achivment_API.Controllers
             }
             return BadRequest("Такая запись не обнаружена");
         }
+        /// <summary>
+        /// Получение данных достижения по его ID
+        /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "ID" : "1",
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="model">Пользователь</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {

@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Achivment_Data_Access\Achivment_Data_Access.csproj" />
+    <ProjectReference Include="..\Achivment_Mapster\Achivment_Mapster.csproj" />
   </ItemGroup>
 
 </Project>
